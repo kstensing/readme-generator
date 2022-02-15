@@ -22,7 +22,7 @@ const questions = () => {
             {
                 type: 'input',
                 name: 'description',
-                message: 'Provide a description of the project (What was your motivation? Why did you build this project? What problem does it solve? What did you learn? (Required)',
+                message: 'Provide a description of the project (why did you build it and what is your motivation)? (Required)',
                 validate: projectDescriptionInput => {
                     if (projectDescriptionInput) {
                         return true;
@@ -33,9 +33,15 @@ const questions = () => {
                 }
             },
             {
+                type: 'checkbox',
+                name: 'languages',
+                message: 'What did you this project with? (Check all that apply)',
+                choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+            },
+            {
                 type: 'input',
                 name: 'installation',
-                message: 'Installation: What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. (Required)',
+                message: 'Installation: What are the steps required to install your project? (Required)',
                 validate: installationInput => {
                     if (installationInput) {
                         return true;
@@ -48,7 +54,7 @@ const questions = () => {
             {
                 type: 'input',
                 name: 'usage',
-                message: 'Usage: Provide instructions and examples for use. (Required) Include screenshots as needed. To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README.',
+                message: 'Usage: Provide instructions and examples for use. (Required)',
                 validate: usageInput => {
                     if (usageInput) {
                         return true;
@@ -59,24 +65,59 @@ const questions = () => {
                 }
             },
             {
-                type: 'input',
-                name: 'credits',
-                message: 'Credits: List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.',
-                default: false
+                type: 'confirm',
+                name: 'confirmLink',
+                message: 'Would you like to add a link to the application?',
+                default: true
             },
             {
                 type: 'input',
-                name: 'license',
-                message: 'License: The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).',
-                validate: licenseInput => {
-                    if (licenseInput) {
+                name: 'link',
+                message: 'Provide the application link.',
+                when: ({
+                    confirmLink
+                }) => confirmLink
+            },
+
+            {
+                type: 'input',
+                name: 'screenshot',
+                message: 'Screenshot: Please provide a path to your screenshot.',
+                validate: screenshotInput => {
+                    if (screenshotInput) {
                         return true;
                     } else {
-                        console.log('Please enter your project license information!');
+                        console.log('Please enter a path to your screenshot!');
                         return false;
                     }
                 }
             },
+
+            // {
+            //     type: 'input',
+            //     name: 'credits',
+            //     message: 'Credits: List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.',
+            //     default: false
+            // },
+            {
+                type: 'checkbox',
+                name: 'license',
+                message: 'Which license would you like to use?',
+                choices: ['MIT (simple & permissive', 'GNU (does not include distributing closed source versions)', 'Apache (extending/contributing to an existing project)']
+            },
+            // {
+            //     type: 'input',
+            //     name: 'license',
+            //     message: 'License: The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).',
+            //     validate: licenseInput => {
+            //         if (licenseInput) {
+            //             return true;
+            //         } else {
+            //             console.log('Please enter your project license information!');
+            //             return false;
+            //         }
+            //     }
+            // },
             // {
             //     type: 'input',
             //     name: 'badges',

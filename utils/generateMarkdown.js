@@ -10,9 +10,41 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+//use this syntax for the license/badges
+const generateLink = appLink => {
+  if (!appLink) {
+    return '';
+  }
+
+  return `
+  Click this [Link](https://${appLink}) for the application.
+  `
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # ${data.title}
+
+  ## Description
+  ${data.description}
+
+  ## This was created using ${data.languages} 
+
+  ## Usage
+  ${data.usage}
+
+
+  ${generateLink(data.link)}
+
+  The application should resemble the image below: 
+  ![Landing Page](${data.screenshot})
+
+
+
+  ## License
+
+    [https://choosealicense.com/](https://choosealicense.com/${data.license})
 
 `;
 }
