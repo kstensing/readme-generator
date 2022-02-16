@@ -51,22 +51,22 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Tests](#tests)
   * [License](#license)
-  * [Usage/Contributing](#usage/contributing)
+  * [Usage](#usage)
   * [Questions](#questions)
 
   ## Installation
   To install the dependencies, run the following command: 
-  <pre><code>${data.installation}
+      "${data.installation}"
 
   ## Tests
   To run tests, run the following command: 
-    ${data.test}
+      ''${data.test}''
 
   ## License
 
   [https://choosealicense.com/](https://choosealicense.com/${data.license})
 
-  ## Usage/Contributing
+  ## Usage
   ${data.usage}
   ${generateLink(data.link)}
 
