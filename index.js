@@ -88,7 +88,8 @@ const questions = () => {
                 type: 'list',
                 name: 'license',
                 message: 'Which license would you like to use?',
-                choices: ['MIT', 'GNU', 'Apache 2.0']
+                choices: ['None', 'MIT', 'GNU', 'Apache 2.0'],
+                //need a way to enter no license
             },
             {
                 type: 'input',
