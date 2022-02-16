@@ -1,22 +1,32 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+};
 
-// const renderLicenseBadge = license => {
-//   if (!license) {
-//     return '';
-//   } 
-//   return `
-//   [https://choosealicense.com/](https://choosealicense.com/${data.license})`
-// }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  
+    if (!license) {
+      return '';
+    } 
+    return `
+    [https://choosealicense.com/](https://choosealicense.com/${data.license})`
+  
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  
+    if (!license) {
+      return '';
+    } 
+    return '## License'   
+  
+};
 
 const githubLink = usernameLink => {
   if (!usernameLink) {
@@ -50,7 +60,6 @@ function generateMarkdown(data) {
 
   * [Installation](#installation)
   * [Tests](#tests)
-  * [License](#license)
   * [Usage](#usage)
   * [Questions](#questions)
 
@@ -62,10 +71,7 @@ function generateMarkdown(data) {
   To run tests, run the following command: 
       ''${data.test}''
 
-  ## License
-
-  [https://choosealicense.com/](https://choosealicense.com/${data.license})
-
+  ${renderLicenseSection(data.license)}
   ## Usage
   ${data.usage}
   ${generateLink(data.link)}
