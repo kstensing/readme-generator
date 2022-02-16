@@ -8,6 +8,32 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = () => {
     return inquirer.prompt([{
                 type: 'input',
+                name: 'username',
+                message: 'What is your GitHub username?',
+                validate: usernameInput => {
+                    if (usernameInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your GitHub username!');
+                        return false;
+                    }
+                }
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email address?',
+                validate: emailInput => {
+                    if (emailInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your email address!');
+                        return false;
+                    }
+                }
+            },
+            {
+                type: 'input',
                 name: 'title',
                 message: 'What is your project title?',
                 validate: titleInput => {
@@ -22,7 +48,7 @@ const questions = () => {
             {
                 type: 'input',
                 name: 'description',
-                message: 'Provide a description of the project (why did you build it and what is your motivation)? (Required)',
+                message: 'Provide a description of the project (Required)',
                 validate: projectDescriptionInput => {
                     if (projectDescriptionInput) {
                         return true;
@@ -33,15 +59,9 @@ const questions = () => {
                 }
             },
             {
-                type: 'checkbox',
-                name: 'languages',
-                message: 'What did you this project with? (Check all that apply)',
-                choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
-            },
-            {
                 type: 'input',
                 name: 'installation',
-                message: 'Installation: What are the steps required to install your project? (Required)',
+                message: 'Installation: What command should be run to install dependencies? (ex. "npm install")(Required)',
                 validate: installationInput => {
                     if (installationInput) {
                         return true;
@@ -53,8 +73,27 @@ const questions = () => {
             },
             {
                 type: 'input',
+                name: 'test',
+                message: 'What command should be run to run tests? (ex. "npm test") (Required)',
+                validate: testInput => {
+                    if (testInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your test command!');
+                        return false;
+                    }
+                }
+            },
+            {
+                type: 'list',
+                name: 'license',
+                message: 'Which license would you like to use?',
+                choices: ['MIT', 'GNU', 'Apache 2.0']
+            },
+            {
+                type: 'input',
                 name: 'usage',
-                message: 'Usage: Provide instructions and examples for use. (Required)',
+                message: 'Usage: What does the user need to know about using the repo? (Required)',
                 validate: usageInput => {
                     if (usageInput) {
                         return true;
@@ -79,32 +118,6 @@ const questions = () => {
                 }) => confirmLink
             },
 
-            {
-                type: 'input',
-                name: 'screenshot',
-                message: 'Screenshot: Please provide a path to your screenshot.',
-                validate: screenshotInput => {
-                    if (screenshotInput) {
-                        return true;
-                    } else {
-                        console.log('Please enter a path to your screenshot!');
-                        return false;
-                    }
-                }
-            },
-
-            // {
-            //     type: 'input',
-            //     name: 'credits',
-            //     message: 'Credits: List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.',
-            //     default: false
-            // },
-            {
-                type: 'checkbox',
-                name: 'license',
-                message: 'Which license would you like to use?',
-                choices: ['MIT (simple & permissive', 'GNU (does not include distributing closed source versions)', 'Apache (extending/contributing to an existing project)']
-            },
             // {
             //     type: 'input',
             //     name: 'license',
@@ -118,32 +131,8 @@ const questions = () => {
             //         }
             //     }
             // },
-            // {
-            //     type: 'input',
-            //     name: 'badges',
-            //     message: 'Badges:(Optional) include any badges if you would like.',
-            //     default: false
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'features',
-            //     message: 'Features:(Optional) if you would like to include features, list those here.',
-            //     default: false
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'contribute',
-            //     message: 'How to Contribute:(Optional) if you would like other developers to contribute to the project, list the instructions here.',
-            //     default: false
-            // },
-            // {
-            //     type: 'input',
-            //     name: 'tests',
-            //     message: 'Tests:(Optional) if you have written tests for your application, provide examples and how to run them.',
-            //     default: false
-            // },
         ])
-        //Not sure here
+        
         .then(data => {
             console.log("testing data: ", data);
 
