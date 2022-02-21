@@ -1,8 +1,10 @@
 
-  # aslkdjf
+  # README.md
 
   ## Description
-  alksjf
+  This project is a command line interface application used to assist th
+e user in generating a professional readme.md file.  Simply install the dependencies, run the application using "node in
+dex.js" & follow the prompts and then obtain your readme!
 
   ## Table of Contents
 
@@ -13,22 +15,22 @@
 
   ## Installation
   To install the dependencies, run the following command: 
-      "lksa"
+      "npm install"
 
   ## Tests
   To run tests, run the following command: 
-      "lakd"
+      "npm test"
 
   ## License
-  [![License: (GNU)](https://img.shields.io/badge/License-GNU-yellow.svg)](https://choosealicense.com/licenses/gpl-3.0/)
+  [![License: (MIT)](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
   
   ## Usage
-  lsdjkf
+  See license information
   
 
 
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at <alskdfj>.  You can find more of my work on GitHub at 
-  [sldkjf](https://gihub.com/sldkjf)
+  If you have any questions about the repo, open an issue or contact me directly at <stensingk@gmail.com>.  You can find more of my work on GitHub at 
+  [kstensing](https://gihub.com/kstensing)
   .
 
