@@ -2,7 +2,7 @@
   # README Generator
 
   ## Description
-  This project is a command line interface application used to assist the user in generating a professional readme.md file.  Simply install the dependencies, run the application using "node index.js" and follow the prompts to obtain your file!
+  This project is a command line interface application used to assist the user in generating a professional readme.md file complete with a table of contents, badge, and license information.  Simply install the dependencies, run the application using "node index.js" and follow the prompts to obtain your file!
 
   ## Table of Contents
 
@@ -27,7 +27,7 @@
   ## Contributing
   
   ## Usage
-  See license information
+  See license info
   
 
 
