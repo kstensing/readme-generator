@@ -2,11 +2,9 @@
   # README.md
 
   ## Description
-  This project is a command line interface application used to assist th
-e user in generating a professional readme.md file.  Simply install the dependencies, run the application using "node in
-dex.js" & follow the prompts and then obtain your readme!
+   This project is a command line interface application used to assist the user in generating a professional readme.md file.  Simple install the dependencies, run the application using "node index.js" & follow the prompts to obtain your readme!
 
-[VideoDemo](https://drive.google.com/file/d/1FMpwCYBzLFBmnmgflPiYVs5hymQ5GTnR/view)
+[Click to view video Demo](https://drive.google.com/file/d/1FMpwCYBzLFBmnmgflPiYVs5hymQ5GTnR/view)
 
   ## Table of Contents
 
