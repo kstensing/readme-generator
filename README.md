@@ -6,6 +6,8 @@
 e user in generating a professional readme.md file.  Simply install the dependencies, run the application using "node in
 dex.js" & follow the prompts and then obtain your readme!
 
+[VideoDemo](https://drive.google.com/file/d/1FMpwCYBzLFBmnmgflPiYVs5hymQ5GTnR/view)
+
   ## Table of Contents
 
   * [Installation](#installation)
