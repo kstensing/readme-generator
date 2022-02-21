@@ -90,6 +90,7 @@ function generateMarkdown(data) {
       "${data.test}"
 
   ## Contributing
+  ${data.contributing}
   
   ## Usage
   ${data.usage}
