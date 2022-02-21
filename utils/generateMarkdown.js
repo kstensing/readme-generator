@@ -73,8 +73,13 @@ function generateMarkdown(data) {
 
   * [Installation](#installation)
   * [Tests](#tests)
+  * [Contributing](#contributing)
   * [Usage](#usage)
   * [Questions](#questions)
+
+
+  ${renderLicenseSection(data.license)}
+  ${renderLicenseBadge(data.license)}
 
   ## Installation
   To install the dependencies, run the following command: 
@@ -84,8 +89,7 @@ function generateMarkdown(data) {
   To run tests, run the following command: 
       "${data.test}"
 
-  ${renderLicenseSection(data.license)}
-  ${renderLicenseBadge(data.license)}
+  ## Contributing
   
   ## Usage
   ${data.usage}

@@ -89,7 +89,20 @@ const questions = () => {
                 name: 'license',
                 message: 'Which license would you like to use?',
                 choices: ['None', 'MIT', 'GNU', 'Apache 2.0'],
-                //need a way to enter no license
+                
+            },
+            {
+                type: 'input',
+                name: 'contributing',
+                message: 'Usage: What does the user need to know about contributing to the repo? (Required)',
+                validate: contributeInput => {
+                    if (contributeInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your project contribution information!');
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',

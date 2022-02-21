@@ -1,17 +1,20 @@
 
-  # README.md
+  # README Generator
 
   ## Description
-  This project is a command line interface application used to assist th
-e user in generating a professional readme.md file.  Simply install the dependencies, run the application using "node in
-dex.js" & follow the prompts and then obtain your readme!
+  This project is a command line interface application used to assist the user in generating a professional readme.md file.  Simply install the dependencies, run the application using "node index.js" and follow the prompts to obtain your file!
 
   ## Table of Contents
 
   * [Installation](#installation)
   * [Tests](#tests)
+  * [Contributing](#contributing)
   * [Usage](#usage)
   * [Questions](#questions)
+
+
+  ## License
+  [![License: (MIT)](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
   ## Installation
   To install the dependencies, run the following command: 
@@ -21,8 +24,7 @@ dex.js" & follow the prompts and then obtain your readme!
   To run tests, run the following command: 
       "npm test"
 
-  ## License
-  [![License: (MIT)](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
+  ## Contributing
   
   ## Usage
   See license information
